@@ -8,7 +8,7 @@ def pytest_addoption(parser):
                      help="Choose language from the list: "
                           "ar, ca, cs, da, de, en-gb, el, es, fi, fr,it, ko, nl, pl, pt, pt-br, ro, ru, sk, uk")
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope = "function")
 def browser(request):
     user_language = request.config.getoption("language")
     if user_language in ["ar", "ca", "cs", "da", "de", "en", "el", "es", "fi", "fr", "it", "ko", "nl", "pl", "pt",
